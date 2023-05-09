@@ -1,11 +1,11 @@
 import React from 'react'
 
-function App() {
+const Msg = () => {
   return (
     <div>
-        APP
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default Msg
