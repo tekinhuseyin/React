@@ -13,6 +13,10 @@ const Form = () => {
   const [pass, setPass] = useState("");
   const [ülke, setUlke] = useState("");
 
+  const formAlindi = () => {
+    alert(`name=${isim}, password:${pass}, country:${ülke}`);
+  };
+
   return (
     <div className="container text-center mt-4">
       <h1>***************************************</h1>
