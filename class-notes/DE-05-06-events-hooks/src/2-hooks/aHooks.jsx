@@ -1,11 +1,11 @@
 import React from 'react'
 
-function App() {
+const aHooks = () => {
   return (
     <div>
-        APP
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default aHooks
