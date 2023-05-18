@@ -1,15 +1,15 @@
 import React from 'react'
-import Msg from './msg/Msg';
+import Msg from './msg/Msg'
+import Footer from './footer/Footer'
 
-function App() {
+
+const App = () => {
   return (
     <div>
-        APP
-
-        <Msg/>
-
+      <Msg/>
+      <Footer/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

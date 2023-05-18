@@ -12,8 +12,11 @@
 //*styling için, property-value(object) yapısı kullanılır.
 //* property name için camelCase yazı şekli, class tanımlamaları için className ismi kullanılır
 //*Material UI, Styled Component, Sass, Bootstrap etc. gibi 3. part kütüphaneler de stil için kullanılabilir.
-import {  } from "module";
+// import { efe } from "module";
 import React from "react";
+import resim from "../img/butterfly.jpg";
+import "../msg/Msg.css"
+import Clock from "../clock/Clock";
 
 const Msg = () => {
   //! internal css
@@ -27,14 +30,16 @@ const Msg = () => {
     <div>
       <h2 style={styleA}>Burasi MSG alani </h2>
 
+      <Clock/>
+      {/* inline css */}
       <p style={{ color: "red", fontSize: "30px" }}>Hosgeldin REACT</p>
 
-      <img
-        src="https://cdn.pixabay.com/photo/2023/04/11/11/21/butterfly-7916963_960_720.jpg"
+      <img className="msg-img"
+        src="https://cdn.pixabay.com/photo/2023/04/11/11/21/butterfly-7916963_960_720.jpg" width="250px"
         alt=""
       />
 
-      <img src="" alt="" />
+      <img className="msg-img" src={resim} alt="" />
     </div>
   );
 };
