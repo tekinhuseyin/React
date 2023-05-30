@@ -7,12 +7,10 @@ const HeaderS = styled.h1`
 `;
 
 
-
-
-
 export const LinkS=styled.a`
-color: salmon;
+color:salmon;
 font-size: 2rem;
-
+/* text-decoration: none; */
 `
+
 export default HeaderS;
