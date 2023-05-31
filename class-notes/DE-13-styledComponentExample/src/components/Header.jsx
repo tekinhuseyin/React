@@ -10,11 +10,10 @@ const Header = () => {
         <LogoSSS src="./images/logo.png" alt="" />
 
         <div>
-          <ButtonSSS halit>Apply courses</ButtonSSS>
-          <ButtonSSS fatih="a62440">Talk to Adviser</ButtonSSS>
+          <ButtonSSS fatih="#A62440">Apply courses</ButtonSSS>
+          <ButtonSSS halit>Talk to Adviser</ButtonSSS>
         </div>
       </DisplaySSS>
-
 <hr />
       <DisplaySSS>
         <div>
@@ -24,7 +23,7 @@ const Header = () => {
             class online with other trainees and learn coding skills with a
             highly-skilled instructor.
           </p>
-          <ButtonSSS fatih="a62440">Start Your New Carrier</ButtonSSS>
+          <ButtonSSS halit>Start Your New Career</ButtonSSS>
           <DetayButton>Details</DetayButton>
         </div>
         <ImageSSS src="./images/hero.jpg" alt="" />
