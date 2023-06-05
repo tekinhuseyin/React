@@ -7,11 +7,11 @@ const UseReducerExample = () => {
   const reducerAA = (state1, action1) => {
     switch (action1.type) {
       case "START":
-        return { ...state1,  loading: true };
+        return { ...state1, loading: true };
       case "SUCCESS":
-        return { ...state1, dog: action1.payload,  loading: false };
+        return { ...state1, dog: action1.payload, loading: false };
       case "FAIL":
-        return { ...state1,  error: action1.payload, loading: false };
+        return { ...state1, error: action1.payload, loading: false };
       default:
     }
   };
@@ -19,11 +19,9 @@ const UseReducerExample = () => {
     loading: false,
     dog: "",
     error: "",
-    
   });
   const { dog, loading, error } = state;
 
-  
   const fetchDog = () => {
     dispatch1({ type: "START" });
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -44,7 +42,7 @@ const UseReducerExample = () => {
     >
       <button
         onClick={fetchDog}
-         disabled={loading}
+        disabled={loading}
         style={{ width: "200px", margin: "1rem" }}
       >
         Fetch Dog
@@ -57,7 +55,6 @@ const UseReducerExample = () => {
 };
 
 export default UseReducerExample;
-
 
 // import { useReducer } from "react";
 // // import { reducer, initialState } from "./reducer";
@@ -80,11 +77,10 @@ export default UseReducerExample;
 //     loading: false,
 //     dog: "",
 //     error: "",
-    
+
 //   });
 //   const { dog, loading, error } = state;
 
-  
 //   const fetchDog = () => {
 //     dispatch1({ type: "START" });
 //     fetch("https://dog.ceo/api/breeds/image/random")

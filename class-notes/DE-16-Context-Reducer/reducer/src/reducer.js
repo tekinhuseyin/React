@@ -11,7 +11,7 @@ export const reducer = (state, action) => {
     case "SUCCESS":
       return { ...state, dog: action.payload, error: "", loading: false };
     case "FAIL":
-      return { ...state, dog: "", error: action.payload, loading: false }
-      default:
+      return { ...state, dog: "", error: action.payload, loading: false };
+    default:
   }
 };
