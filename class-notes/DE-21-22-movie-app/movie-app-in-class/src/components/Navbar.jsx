@@ -1,14 +1,16 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png";
+import { AuthContex } from "../context/AuthContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  const currentUser = { displayName: "felix franko" };
+  const { logOut, currentUser } = useContext(AuthContex);
+  // const currentUser = { displayName: "felix franko" };
   // const currentUser = false;
   return (
     <>
@@ -23,7 +25,7 @@ export default function Navbar() {
             </Link>
             <div className="absolute inset-y-0 right-0 flex items-center">
               {currentUser && (
-                <h5 className="mr-2 capitalize">{currentUser.displayName}</h5>
+                <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>
               )}
               {/* Profile dropdown */}
               <Menu as="div" className="relative ml-3">
@@ -32,7 +34,7 @@ export default function Navbar() {
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-8 w-8 rounded-full"
-                      src={currentUser.photoURL || avatar}
+                      src={currentUser?.photoURL || avatar}
                       referrerPolicy="no-referrer"
                       alt=""
                     />
@@ -82,6 +84,7 @@ export default function Navbar() {
                             active ? "bg-gray-100" : "",
                             "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
                           )}
+                          onClick={() => logOut()}
                         >
                           Log out
                         </span>
