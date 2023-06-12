@@ -1,7 +1,16 @@
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  Input,
+  InputAdornment,
+  InputLabel,
+  TextField,
+  Typography,
+} from "@mui/material";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-
+import React from "react";
 const TextFieldComp = () => {
   let error1 = true;
   return (
@@ -40,21 +49,20 @@ const TextFieldComp = () => {
             // defaultValue="Hello World"
             helperText={error1 && "yanlis girdiniz"}
           />
-          <Button variant="contained" color="error">
-
-            <FormControl variant="standard">
-              <InputLabel htmlFor="input-with-icon-adornment">
-                With a start adornment
-              </InputLabel>
-              <Input
-                id="input-with-icon-adornment"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                }
-              />
-            </FormControl>
+          <FormControl fullWidth margin="normal" variant="standard">
+            <InputLabel htmlFor="input-with-icon-adornment">
+              With a start adornment
+            </InputLabel>
+            <Input
+              id="input-with-icon-adornment"
+              startAdornment={
+                <InputAdornment position="start">
+                  <AccountCircle color="error" />
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+          <Button fullWidth variant="contained" color="error">
             SUBMIT
           </Button>
         </Box>
