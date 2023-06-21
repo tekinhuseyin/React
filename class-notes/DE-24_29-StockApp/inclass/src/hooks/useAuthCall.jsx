@@ -14,11 +14,11 @@ import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 const useAuthCall = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { token } = useSelector(state => state.auth);
+  const { token } = useSelector((state) => state.auth);
 
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-  const login = async userInfo => {
+  const login = async (userInfo) => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
@@ -55,7 +55,7 @@ const useAuthCall = () => {
     }
   };
 
-  const register = async userInfo => {
+  const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(

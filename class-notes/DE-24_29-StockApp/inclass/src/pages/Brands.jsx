@@ -1,4 +1,9 @@
 const Brands = () => {
+
+  // useEffect(() => {
+  //   getStockData("brands")
+  // }, [])
+  
   return <div>Brands</div>
 }
 
